@@ -1,0 +1,8 @@
+#!/bin/bash
+
+FLAGS="-pedantic -std=c2x -g -Wall -Werror"
+
+file=$1
+name=$(echo $file | cut -f 1 -d '.')
+
+gcc $FLAGS -o $name $file
